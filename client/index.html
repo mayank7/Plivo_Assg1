@@ -21,6 +21,8 @@ $.ajax({
   },
     success: function(returnedData){
          console.info(returnedData);
+         document.getElementById("container").innerHTML = JSON.stringify(returnedData,null,4);
+
      },
      error: function(err){
         console.warn(err);
@@ -40,6 +42,7 @@ $.ajax({
   },
     success: function(returnedData){
          console.info(returnedData);
+         document.getElementById("container").innerHTML = JSON.stringify(returnedData,null,4);
      },
      error: function(err){
         console.warn(err);
@@ -59,6 +62,7 @@ $.ajax({
   },
     success: function(returnedData){
         console.info(returnedData);
+        document.getElementById("container").innerHTML = JSON.stringify(returnedData,null,4);
      },
      error: function(err){
         console.warn(err);
@@ -78,6 +82,7 @@ $.ajax({
   },
     success: function(returnedData){
          console.info(returnedData);
+        document.getElementById("container").innerHTML = JSON.stringify(returnedData,null,4);
      },
      error: function(err){
         console.warn(err);
@@ -113,6 +118,7 @@ function fun5(){
   },
     success: function(returnedData){
          console.info(returnedData);
+        document.getElementById("container").innerHTML = JSON.stringify(returnedData,null,4);
      },
      error: function(err){
         console.warn(err);
@@ -129,6 +135,7 @@ function fun5(){
   },
     success: function(returnedData){
          console.info(returnedData);
+         document.getElementById("container").innerHTML = JSON.stringify(returnedData,null,4);
      },
      error: function(err){
         console.warn(err);
@@ -171,6 +178,7 @@ document.getElementById("two").style.display = 'block';
 <input type="number" placeholder="Enter App no." id = "num"></input>
 <input type="button" onclick="fun5();" value="Check"> </input>
 </div>
+<div id="container"></div>
 </body>
 </body>
 </head>
