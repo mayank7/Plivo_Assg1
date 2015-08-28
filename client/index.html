@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+// this function fun1() is for creating a new application /////////////
+function fun1(){
+$.ajax({
+	type:'POST',
+	url:'https://api.plivo.com/v1/Account/MAOTU3YMVJOGIXMJNKOT/Application/?answer_url=Hello, thanks for call&app_name=new',
+	contentType:'application/json',
+	beforeSend: function(xhr) {
+    xhr.setRequestHeader("Authorization", "Basic TUFPVFUzWU1WSk9HSVhNSk5LT1Q6Wm1FNE1qZ3lOekV6TXpWaE5tUm1NREEwTkRZME5qWXdaVGxqTlRrMQ==");
+  },
+    success: function(returnedData){
+         console.info(returnedData);
+     },
+     error: function(err){
+     	console.warn(err);
+     }
+});
+}
+////////////////////////////////////////////////////////////////////////
+
+// this function fun2() is for listing all the applications /////////////
+function fun2(){
+$.ajax({
+	type:'GET',
+	url:'https://api.plivo.com/v1/Account/MAOTU3YMVJOGIXMJNKOT/Application/',
+	contentType:'application/json',
+	beforeSend: function(xhr) {
+    xhr.setRequestHeader("Authorization", "Basic TUFPVFUzWU1WSk9HSVhNSk5LT1Q6Wm1FNE1qZ3lOekV6TXpWaE5tUm1NREEwTkRZME5qWXdaVGxqTlRrMQ==");
+  },
+    success: function(returnedData){
+         console.info(returnedData);
+     },
+     error: function(err){
+     	console.warn(err);
+     }
+});
+}
+////////////////////////////////////////////////////////////////////////////
+
+// this function fun3() is for editing an application //////////////////////
+function fun3(){
+$.ajax({
+	type:'POST',
+	url:'https://api.plivo.com/v1/Account/MAOTU3YMVJOGIXMJNKOT/Application/20372631212782780/',
+	contentType:'application/json',
+	beforeSend: function(xhr) {
+    xhr.setRequestHeader("Authorization", "Basic TUFPVFUzWU1WSk9HSVhNSk5LT1Q6Wm1FNE1qZ3lOekV6TXpWaE5tUm1NREEwTkRZME5qWXdaVGxqTlRrMQ==");
+  },
+    success: function(returnedData){
+         console.info(returnedData);
+     },
+     error: function(err){
+     	console.warn(err);
+     }
+});
+}
+//////////////////////////////////////////////////////////////////////////////
+
+// this function fun4() is for deleting an application ///////////////////////
+function fun4(){
+$.ajax({
+	type:'DELETE',
+	url:'https://api.plivo.com/v1/Account/MAOTU3YMVJOGIXMJNKOT/Application/20372631212782780/',
+	contentType:'application/json',
+	beforeSend: function(xhr) {
+    xhr.setRequestHeader("Authorization", "Basic TUFPVFUzWU1WSk9HSVhNSk5LT1Q6Wm1FNE1qZ3lOekV6TXpWaE5tUm1NREEwTkRZME5qWXdaVGxqTlRrMQ==");
+  },
+    success: function(returnedData){
+         console.info(returnedData);
+     },
+     error: function(err){
+     	console.warn(err);
+     }
+});
+}
+////////////////////////////////////////////////////////////////////////////////
+</script>
+<input type="button" onclick="fun1();" value="Create"> </input>
+<input type="button" onclick="fun2();" value="List"> </input>
+<input type="button" onclick="fun3();" value="Edit"> </input>
+<input type="button" onclick="fun4();" value="Delete"> </input>
+</body>
+</head>
+</html>
